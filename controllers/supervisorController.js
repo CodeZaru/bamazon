@@ -3,7 +3,7 @@ var clear = require("clear");
 require("console.table");
 
 
-var Query = require("./models/supervisorModel");
+var Query = require("../models/supervisorModel");
 
 module.exports = function(){
   Query.salesByDepartment().then((results)=>{

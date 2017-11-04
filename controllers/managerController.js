@@ -3,7 +3,7 @@ var clear = require("clear");
 require("console.table");
 
 
-var Query = require("./models/managerModel");
+var Query = require("../models/managerModel");
 
 module.exports = function(){
   inquirer.prompt([
@@ -25,7 +25,7 @@ module.exports = function(){
     switch(choice){
       case 1:
       //View Products for Sale
-        Query.viewAll().then((products)=>{
+        Query.viewAllProducts().then((products)=>{
           console.table(products);
         });
         Query.close();
@@ -33,7 +33,7 @@ module.exports = function(){
 
       case 2:
       //View Low Inventory
-        Query.viewLow().then((products)=>{
+        Query.viewLowInventory().then((products)=>{
           console.table(products)
         })
         Query.close();
@@ -46,7 +46,7 @@ module.exports = function(){
           {name: "quantity", type: "input", message: "Quantity to add?"}
         ]).then((input)=>{
 
-          Query.restock(input.id, input.quantity).then((result)=>{
+          Query.addInventory(input.id, input.quantity).then((result)=>{
             if (result) console.log("Inventory Added!");
             Query.close();
           })
@@ -61,7 +61,7 @@ module.exports = function(){
           {name: "price", type: "input", message: "Please provide the price." },
           {name: "stockQuantity", type: "input", message: "Please provide the quantity to add."}
         ]).then((input)=>{
-          Query.newProduct(input).then((result)=>{
+          Query.addNewProduct(input).then((result)=>{
             if (result.affectedRows == 1) console.log("Product Successfully Added!");
             Query.close();
           });

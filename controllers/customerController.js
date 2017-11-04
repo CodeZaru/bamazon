@@ -60,9 +60,9 @@ var orderProcessingDialog = function(orderObj){
   return new Promise((resolve, reject)=>{
     var id = orderObj.id;
     var quantity = orderObj.quantity;
-    connection.query("UPDATE product set stock_quantity = stock_quantity - ? WHERE id = ?;", [quantity, id], function(err, data){
+    connection.query("UPDATE product set stockQuantity = stockQuantity - ? WHERE id = ?;", [quantity, id], function(err, data){
       if (err) reject(err);
-      connection.query("INSERT INTO sale (quantity_purchased, product_id) VALUES (?, ?);",[quantity, id], function(err, data){
+      connection.query("INSERT INTO sale (quantityPurchased, productId) VALUES (?, ?);",[quantity, id], function(err, data){
         if (err) reject(err);
         resolve(data);
       })

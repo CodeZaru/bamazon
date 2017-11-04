@@ -15,5 +15,11 @@
     "url": "https://github.com/CodeZaru/bamazon/issues"
   },
   "homepage": "https://github.com/CodeZaru/bamazon#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "clear": "0.0.1",
+    "console.table": "^0.9.1",
+    "inquirer": "^3.3.0",
+    "mysql": "^2.15.0"
+  }
 }

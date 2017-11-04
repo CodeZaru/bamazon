@@ -30,10 +30,10 @@ CREATE TABLE sale (
 
 # Populate Department & Products
 INSERT INTO department (departmentName, overheadCost)
-    VALUES ("Sporting Goods", 77777.77),
-      ("Books", 33333.33),
-      ("Furniture", 55555.55),
-      ("Fashion", 88888.88)
+    VALUES ("Sporting Goods", 777.77),
+      ("Books", 33.33),
+      ("Furniture", 5555.55),
+      ("Fashion", 888.88)
       ;
 
 INSERT INTO product (productName, departmentId, price, stockQuantity)
