@@ -7,13 +7,13 @@ require("console.table");
 // create the connection information for the sql database
 var connection = mysql.createConnection({
   host: "localhost",
-  port: 3307,
+  port: 3307,//I use 3307 because I've got another db on 3306
 
   // Your username
-  user: "kevin",
+  user: "???",
 
   // Your password
-  password: "gwbootcamp",
+  password: "???",
   database: "bamazon_db",
   multipleStatements: true 
 });

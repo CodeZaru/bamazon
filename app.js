@@ -5,7 +5,7 @@ var customer = require("./controllers/customerController");
 var manager = require("./controllers/managerController");
 var supervisor = require("./controllers/supervisorController");
 
-//const PASSWORD = "gwbootcamp";  
+ 
 
 cliSelectRole();
 
